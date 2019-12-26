@@ -1,10 +1,10 @@
-def isSafe(board,row,column):
+def isSafe(board, row, column):
     
     n = len(board)
     
     i = row
     j = column
-    while i!=0 and j!=0:
+    while i != 0 and j != 0:
         i-=1
         j-=1
         if board[i][j]==1:
@@ -12,27 +12,57 @@ def isSafe(board,row,column):
 
     i = row
     j = column
-    while i!=n and j!=n:
+    while i != n and j != n:
         i+=1
         j+=1
-        if board[i][j]==1:
+        if board[i][j] == 1:
             return False
         
     i = row
     j = column
-    while i!=0 and j!=n:
+    while i != 0 and j != n:
         i-=1
         j+=1
-        if board[i][j]==1:
+        if board[i][j] == 1:
             return False
 
     i = row
     j = column
-    while i!=n and j!=0:
+    while i != n and j != 0:
         i+=1
         j-=1
-        if board[i][j]==1:
+        if board[i][j] == 1:
             return False
 
     return True
 
+
+def bishopSolution(board, k, row, column):
+
+    global counter
+    n = len(board)
+    j = 0
+    
+    if k == 0:
+        return True
+
+    while j != n:
+        if isSafe(board, row, j):
+            board[row][j]=1
+            if bishopSolution(board, k-1, row+1, j):
+                counter+=1
+        j+=1
+    
+    board[row-1][column]=0
+    board[row-1][column+1]=1
+    bishopSolution(board, k, row, column+1)
+
+
+counter = 0
+board = [
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0]
+]  
+bishopSolution(board, 4, 0, 0)
