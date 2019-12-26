@@ -1,10 +1,10 @@
 def isSafe(board,row,column):
     
-    int board_len = board.len()
+    n = len(board)
     
-    int i = row
-    int j = column
-    for i!=0 and j!=0:
+    i = row
+    j = column
+    while i!=0 and j!=0:
         i-=1
         j-=1
         if board[i][j]==1:
@@ -12,7 +12,7 @@ def isSafe(board,row,column):
 
     i = row
     j = column
-    for i!=board_len and j!=board_len:
+    while i!=n and j!=n:
         i+=1
         j+=1
         if board[i][j]==1:
@@ -20,7 +20,7 @@ def isSafe(board,row,column):
         
     i = row
     j = column
-    for i!=0 and j!=board_len:
+    while i!=0 and j!=n:
         i-=1
         j+=1
         if board[i][j]==1:
@@ -28,7 +28,7 @@ def isSafe(board,row,column):
 
     i = row
     j = column
-    for i!=board_len and j!=0:
+    while i!=n and j!=0:
         i+=1
         j-=1
         if board[i][j]==1:
