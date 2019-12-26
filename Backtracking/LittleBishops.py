@@ -51,19 +51,16 @@ def bishopSolution(board, k, row, column):
             board[row][j]=1
             if bishopSolution(board, k-1, row+1, j):
                 counter+=1
+                board[row][j]=0
         j+=1
     
     board[row-1][column]=0
-    board[row-1][column+1]=1
-    bishopSolution(board, k, row, column+1)
 
 
 counter = 0
 board = [
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0]
-]  
-bishopSolution(board, 4, 0, 0)
+    [0,0],
+    [0,0]
+]
+bishopSolution(board, 1, 0, 0)
 print(counter)
