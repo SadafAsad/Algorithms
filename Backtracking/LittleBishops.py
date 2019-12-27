@@ -63,12 +63,18 @@ def bishop(board, k, row, column):
         j=0
     return False
 
+
+def initializeBoard(board, n):
+    i=0
+    while i<n:
+        board.append([])
+        j=0
+        while j<n:
+            board[i].append(0)
+            j+=1
+        i+=1
+    print(board)
+
+board = list()
 counter = 0
-board = [
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0]
-]
-bishop(board, 4, 0, 0)
-print(counter)
+initializeBoard(board,4)
