@@ -34,7 +34,7 @@ def quick_sort(ilist, low, high):
 
 inputArr = []
 new_input = 0
-while(new_input!="0 0"):
+while(new_input!="0 0"): # for ending the Input stream u have to enter "0 0"
     new_input = input()
     if(new_input !="0 0" and new_input != ''):
         inputArr.append(new_input)
