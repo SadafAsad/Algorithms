@@ -77,6 +77,9 @@ def initializeBoard(board, n):
 
 board = list()
 counter = 0
-initializeBoard(board,8)
-bishop(board, 6, 0, 0)
+
+n = 8
+k = 6
+initializeBoard(board,n)
+bishop(board, k, 0, 0)
 print(counter)
