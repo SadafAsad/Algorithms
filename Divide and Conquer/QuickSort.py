@@ -23,6 +23,16 @@ def quick_sort(ilist, low, high):
         quick_sort(ilist, index+1, high)
 
 
-x = [1, 4, 8, 2, 1, 0, 2]
-quick_sort(x, 0, len(x)-1)
-print(x)
+
+
+inputArr = []
+new_input = 0
+while(new_input!="0 0"):
+    new_input = input()
+    if(new_input !="0 0" and new_input != ''):
+        inputArr.append(new_input)
+print(inputArr)
+Arr= inputArr
+quick_sort(Arr, 0, len(Arr)-1)
+print(Arr)
+
