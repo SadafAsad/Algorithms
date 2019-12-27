@@ -24,5 +24,5 @@ def quick_sort(ilist, low, high):
 
 
 x = [1, 4, 8, 2, 1, 0, 2]
-quick_sort(x, 0, 6)
+quick_sort(x, 0, len(x)-1)
 print(x)
