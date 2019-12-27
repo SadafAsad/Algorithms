@@ -75,19 +75,18 @@ def initializeBoard(board, n):
         i+=1
 
 
-# n = input("Please Enter N: ")
-# k = input("Please Enter K: ")
+
 inputsArr =[]
 inputs = 0
+
 while(inputs !="0 0"):
-    inputs = input("N K : ")
+    inputs = input()
     inputsArr.append(inputs)
 i = len(inputsArr)
 j=0
 while(i != 0):
     
     new_input=inputsArr[j]
-    # print("new input here :" + new_input)
     if(new_input == "0 0"):
         break
     n = new_input[0]
@@ -98,7 +97,6 @@ while(i != 0):
     bishop(board, int(k), 0, 0)
     print(counter)
     j +=1
-    # print("J here: " + str(j))
     i -=1
 
 
