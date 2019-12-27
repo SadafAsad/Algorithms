@@ -17,7 +17,7 @@ def partition(ilist, low, high):
             ilist[j] = ilist[i]
             ilist[i] = temp2
             j = j-1
-        elif i == pivot_index:
+        elif ilist[i] == pivot:
             i = i+1
     return low
 
