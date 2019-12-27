@@ -92,7 +92,7 @@ while(i != 0): #this while will take each inputs and run it
     n = new_input[0]
     k = new_input[2]
     board = list() #reload the board
-    counter = 0 #reload the counter
+    counter = 0 #reload the counter 
     initializeBoard(board,int(n))
     bishop(board, int(k), 0, 0)
     print(counter)
