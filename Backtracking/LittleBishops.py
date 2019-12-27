@@ -78,8 +78,11 @@ def initializeBoard(board, n):
 board = list()
 counter = 0
 
-n = input("Please Enter N: ")
-k = input("Please Enter K: ")
+# n = input("Please Enter N: ")
+# k = input("Please Enter K: ")
+inputs = input("N K : ")
+n = inputs[0]
+k = inputs[2]
 initializeBoard(board,int(n))
 bishop(board, int(k), 0, 0)
 print(counter)
