@@ -44,35 +44,31 @@ def bishop(board, k, row, column):
     i = row
     j = column
 
+    if k==0:
+        return True
+
     while i<n:
         while j<n:
             if isSafe(board, i, j):
                 board[i][j]=1
-                if i==n-1:
-                    if j==n-1: 
-                        if bishop(board, k-1, i+1, 0):
-                            counter+=1
-                            board[i][j]=0
-                    else:
-                        if bishop(board, k-1, i+1, j):
-                            counter+=1
-                            board[i][j]=0
-                elif j==n-1:
-                    if bishop(board, k-1, i, 0):
+                if j==n-1:
+                    if bishop(board, k-1, i+1, 0):
                         counter+=1
-                        board[i][j]=0
                 else:
-                    if bishop(board, k-1, i, j):
+                    if bishop(board, k-1, i, j+1):
                         counter+=1
-                        board[i][j]=0
+                board[i][j]=0        
             j+=1
         i+=1
+        j=0
+    return False
 
 counter = 0
 board = [
-    [0,0,0],
-    [0,0,0],
-    [0,0,0]
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0]
 ]
-bishop(board, 2, 0, 0)
+bishop(board, 4, 0, 0)
 print(counter)
