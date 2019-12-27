@@ -37,9 +37,20 @@ new_input = 0
 while(new_input!="0 0"): # for ending the Input stream u have to enter "0 0"
     new_input = input()
     if(new_input !="0 0" and new_input != ''):
-        inputArr.append(new_input)
+        inputArr.append(int(new_input))
 print(inputArr)
 Arr= inputArr
 quick_sort(Arr, 0, len(Arr)-1)
 print(Arr)
 
+# input Example : hit enter after each number then enter "0 0"  like below:
+'''
+2
+3
+4
+0
+2
+1
+0 0
+
+'''
