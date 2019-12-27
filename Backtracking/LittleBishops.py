@@ -73,8 +73,10 @@ def initializeBoard(board, n):
             board[i].append(0)
             j+=1
         i+=1
-    print(board)
+
 
 board = list()
 counter = 0
-initializeBoard(board,4)
+initializeBoard(board,8)
+bishop(board, 6, 0, 0)
+print(counter)
