@@ -79,20 +79,20 @@ def initializeBoard(board, n):
 inputsArr =[]
 inputs = 0
 
-while(inputs !="0 0"):
+while(inputs !="0 0"): # this while will fill the list of Inputs
     inputs = input()
     inputsArr.append(inputs)
 i = len(inputsArr)
 j=0
-while(i != 0):
+while(i != 0): #this while will take each inputs and run it
     
     new_input=inputsArr[j]
-    if(new_input == "0 0"):
+    if(new_input == "0 0"): # here will check if its have to be done or not ("0 0")
         break
     n = new_input[0]
     k = new_input[2]
-    board = list()
-    counter = 0
+    board = list() #reload the board
+    counter = 0 #reload the counter
     initializeBoard(board,int(n))
     bishop(board, int(k), 0, 0)
     print(counter)
