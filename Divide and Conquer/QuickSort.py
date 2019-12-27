@@ -4,14 +4,21 @@ def partition(ilist, low, high):
     pivot = ilist[pivot_index]
 
     i = low
-    while i <= high:
+    j = high
+    while i <= high and j > low:
         if ilist[i] < pivot and i != pivot_index:
             temp = ilist[low]
             ilist[low] = ilist[i]
             ilist[i] = temp
             low = low+1
-        i = i+1
-
+            i = i+1
+        elif ilist[i] > pivot:
+            temp2 = ilist[j]
+            ilist[j] = ilist[i]
+            ilist[i] = temp2
+            j = j-1
+        elif i == pivot_index:
+            i = i+1
     return low
 
 
