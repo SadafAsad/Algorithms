@@ -79,17 +79,26 @@ def initializeBoard(board, n):
 # k = input("Please Enter K: ")
 inputsArr =[]
 inputs = 0
-while(len(inputsArr) == 0):
-    while(inputs !="0 0"):
-        inputs = input("N K : ")
-        inputsArr.append(inputs)
-    print(inputsArr)
-    # n = inputs[0]
-    # k = inputs[2]
-    # board = list()
-    # counter = 0
-    # initializeBoard(board,int(n))
-    # bishop(board, int(k), 0, 0)
-    # print(counter)
+while(inputs !="0 0"):
+    inputs = input("N K : ")
+    inputsArr.append(inputs)
+i = len(inputsArr)
+j=0
+while(i != 0):
+    
+    new_input=inputsArr[j]
+    # print("new input here :" + new_input)
+    if(new_input == "0 0"):
+        break
+    n = new_input[0]
+    k = new_input[2]
+    board = list()
+    counter = 0
+    initializeBoard(board,int(n))
+    bishop(board, int(k), 0, 0)
+    print(counter)
+    j +=1
+    # print("J here: " + str(j))
+    i -=1
 
 
