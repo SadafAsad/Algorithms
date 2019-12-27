@@ -80,9 +80,14 @@ counter = 0
 
 # n = input("Please Enter N: ")
 # k = input("Please Enter K: ")
-inputs = input("N K : ")
-n = inputs[0]
-k = inputs[2]
-initializeBoard(board,int(n))
-bishop(board, int(k), 0, 0)
-print(counter)
+inputsArr =[]
+inputs = 0
+while(inputs != "0 0"):
+    inputs = input("N K : ")
+    n = inputs[0]
+    k = inputs[2]
+    initializeBoard(board,int(n))
+    bishop(board, int(k), 0, 0)
+    print(counter)
+
+
