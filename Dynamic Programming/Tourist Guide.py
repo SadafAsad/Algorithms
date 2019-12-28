@@ -12,6 +12,17 @@ def solution(dynamic_table):
             i+=1
         k+=1
 
+def initializeMatris(matris, n):
+    i=0
+    while i<n:
+        matris.append([])
+        j=0
+        while j<n:
+            matris[i].append(0)
+            j+=1
+        i+=1
+
+
 
 matrix = [
     [0, 30, 15, 10, 0, 0, 0],
@@ -24,3 +35,10 @@ matrix = [
 ]
 solution(matrix)
 print(99//matrix[0][6])
+
+new_input = input()
+
+inputsArr = []
+inputsArr.append(new_input)
+matris=[]
+while(new_input !="0 0"):
