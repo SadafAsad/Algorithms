@@ -24,33 +24,28 @@ def initializeMatris(matris, n):
 
 
 
-matrix = [
-    [0, 30, 15, 10, 0, 0, 0],
-    [30, 0, 0, 25, 60, 0, 0],
-    [15, 0, 0, 40, 0, 20, 0],
-    [10, 25, 40, 0, 0, 0, 35],
-    [0, 60, 0, 0, 0, 0, 20],
-    [0, 0, 20, 0, 0, 0, 30],
-    [0, 0, 0, 35, 20, 30, 0]
-]
-solution(matrix)
-print(99//matrix[0][6])
-
 
 
 new_input = input()
 cityNum, roads = new_input.split()
 
 matris=list()
-initializeMatris(matris,cityNum)
+initializeMatris(matris,int(cityNum))
 
 i=0
 while(new_input !="0 0"):
-    while(i < roads):
+    while(i < int(roads)):
+        new_input = input()
         x, y, capa = new_input.split()
         matris[int(x)-1][int(y)-1] = int(capa)
         matris[int(y)-1][int(x)-1] = int(capa)
         i += 1
+    new_input = input()
+    a, b, c = new_input.split()
+    new_input = input()
+
+solution(matris)
+print( round(int(c)/matris[int(a)-1][int(b)-1]) )
     
 
 
