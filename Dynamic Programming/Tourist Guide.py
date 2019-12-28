@@ -36,9 +36,17 @@ matrix = [
 solution(matrix)
 print(99//matrix[0][6])
 
+
+
 new_input = input()
 
 inputsArr = []
-inputsArr.append(new_input)
+cityNum = int(new_input[0])
 matris=[]
+initializeMatris(matris,cityNum)
+i=0
 while(new_input !="0 0"):
+    while(i < cityNum):
+        
+
+
