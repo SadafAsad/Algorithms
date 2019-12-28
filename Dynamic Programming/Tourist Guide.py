@@ -39,15 +39,13 @@ print(99//matrix[0][6])
 
 
 new_input = input()
+cityNum, roads = new_input.split()
 
-inputsArr = []
-cityNum = int(new_input[0])
-roads = int(new_input[2])
 matris=list()
 initializeMatris(matris,cityNum)
+
 i=0
 while(new_input !="0 0"):
-    new_input =input()
     while(i < roads):
         x, y, capa = new_input.split()
         matris[int(x)-1][int(y)-1] = int(capa)
