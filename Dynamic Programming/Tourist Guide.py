@@ -1,12 +1,13 @@
 
-def fun(matrix, n):
+def solution(dynamic_table):
+    n=len(dynamic_table)
     k=0
     while k<n:
         i=0
         while i<n:
             j=0
             while j<n:
-                matrix[i][j]=max( matrix[i][j], min( matrix[i][k], matrix[k][j] ) )
+                dynamic_table[i][j]=max( dynamic_table[i][j], min( dynamic_table[i][k], dynamic_table[k][j] ) )
                 j+=1
             i+=1
         k+=1
@@ -21,5 +22,5 @@ matrix = [
     [0, 0, 20, 0, 0, 0, 30],
     [0, 0, 0, 35, 20, 30, 0]
 ]
-fun(matrix, 7)
+solution(matrix)
 print(99//matrix[0][6])
