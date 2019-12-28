@@ -42,11 +42,17 @@ new_input = input()
 
 inputsArr = []
 cityNum = int(new_input[0])
+roads = int(new_input[2])
 matris=list()
 initializeMatris(matris,cityNum)
 i=0
 while(new_input !="0 0"):
-    while(i < cityNum):
-        
+    new_input =input()
+    while(i < roads):
+        x, y, capa = new_input.split()
+        matris[int(x)-1][int(y)-1] = int(capa)
+        matris[int(y)-1][int(x)-1] = int(capa)
+        i += 1
+    
 
 
