@@ -1,6 +1,4 @@
 
-import math
-
 def fun(matrix, n):
     k=0
     while k<n:
@@ -14,15 +12,14 @@ def fun(matrix, n):
         k+=1
 
 
-inf = math.inf
 matrix = [
-    [0, 30, 15, 10, inf, inf, inf],
-    [30, 0, inf, 25, 60, inf, inf],
-    [15, inf, 0, 40, inf, 20, inf],
-    [10, 25, 40, 0, inf, inf, 35],
-    [inf, 60, inf, inf, 0, inf, 20],
-    [inf, inf, 20, inf, inf, 0, 30],
-    [inf, inf, inf, 35, 20, 30, 0]
+    [0, 30, 15, 10, 0, 0, 0],
+    [30, 0, 0, 25, 60, 0, 0],
+    [15, 0, 0, 40, 0, 20, 0],
+    [10, 25, 40, 0, 0, 0, 35],
+    [0, 60, 0, 0, 0, 0, 20],
+    [0, 0, 20, 0, 0, 0, 30],
+    [0, 0, 0, 35, 20, 30, 0]
 ]
 fun(matrix, 7)
-print(matrix[0][6])
+print(99//matrix[0][6])
