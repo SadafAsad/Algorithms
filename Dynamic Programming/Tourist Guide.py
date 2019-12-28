@@ -42,7 +42,7 @@ new_input = input()
 
 inputsArr = []
 cityNum = int(new_input[0])
-matris=[]
+matris=list()
 initializeMatris(matris,cityNum)
 i=0
 while(new_input !="0 0"):
