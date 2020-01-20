@@ -1,52 +1,32 @@
-def initializeTable(n):
-    table = list()
+def computingMins(table):
+    n=len(table)
     k=0
-    while k<n+1:
+    while k<n:
         i=0
-        table.append([])
         while i<n:
             j=0
-            table[k].append([])
             while j<n:
-                table[k][i].append(0)
-                j+=1
-            i+=1
-        k+=1
-    return table
-
-
-def fillingTable(table, input_table):
-    n = len(input_table)
-    i=0
-    while i<n:
-        j=0
-        while j<n:
-            table[0][i][j] = input_table[i][j]
-            j+=1
-        i+=1
-
-
-def computingMins(table):
-    n = len(table)
-    k=1
-    while k<n-1:
-        i=0
-        while i<n-1:
-            j=0
-            while j<n-1:
-                table[k][i][j] =  min( table[k-1][i][j] , table[k-1][i][k] + table[k-1][k][j] )
+                table[i][j] =  min( table[i][j] , table[i][k] + table[k][j] )
                 j+=1
             i+=1
         k+=1
 
 
-t = [[0, 5, 999, 10],
-     [999, 0, 3, 999],
-     [999, 999, 0, 1],
-     [999, 999, 999, 0]]
+# t = [[0, 5, 999, 10],
+#      [999, 0, 3, 999],
+#      [999, 999, 0, 1],
+#      [999, 999, 999, 0]]
 
-d_t = initializeTable(len(t))
-fillingTable(d_t, t)
-computingMins(d_t)
-print(d_t)
+t = [[0, 999, -2, 999],
+     [4, 0, 3, 999],
+     [999, 999, 0, 2],
+     [999, -1, 999, 0]]
+
+# t = [[0, 8, 999, 1],
+#      [999, 0, 1, 999],
+#      [4, 999, 0, 999],
+#      [999, 2, 9, 0]]
+
+computingMins(t)
+print(t)
 
