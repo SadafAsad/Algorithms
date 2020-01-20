@@ -1,3 +1,5 @@
+import math
+
 # initializes dynamic table with infinities
 def buildTable(n):
     table = list()
@@ -6,7 +8,7 @@ def buildTable(n):
         table.append([])
         j=0
         while j<n:
-            table[i].append(999)
+            table[i].append(math.inf)
             j+=1
         i+=1
     return table
